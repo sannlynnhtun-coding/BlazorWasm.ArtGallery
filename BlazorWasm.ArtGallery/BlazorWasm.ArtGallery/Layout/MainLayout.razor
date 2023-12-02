@@ -1,5 +1,5 @@
 ﻿@inherits LayoutComponentBase
-
+@inject IJSRuntime JsRuntime
 <!-- Wrapper Site -->
 <div id="main-content">
 
@@ -228,3 +228,14 @@
     </div>
 </footer>
 <!-- End Footer -->
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JsRuntime.InvokeVoidAsync("enableLoading", true);
+            await Task.Delay(1000);
+            await JsRuntime.InvokeVoidAsync("enableLoading", false);
+        }
+    }
+}
