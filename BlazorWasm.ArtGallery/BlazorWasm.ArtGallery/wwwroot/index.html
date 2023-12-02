@@ -4,29 +4,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlazorWasm.ArtGallery</title>
+
+    <title>Art Gallery</title>
     <base href="/" />
 
+    <meta property="og:title" content="Blazor WASM - Art Gallery">
+    <meta name="twitter:title" content="Blazor WASM - Art Gallery">
+    <meta name="description" content="Blazor WASM - Art Gallery">
+    <meta property="og:description" content="Blazor WASM - Art Gallery">
+    <meta name="twitter:description" content="Blazor WASM - Art Gallery">
+    <meta property="og:image" content="https://blazor-wasm-art-gallery.vercel.app/favicon.png">
+    <meta name="twitter:image" content="https://blazor-wasm-art-gallery.vercel.app/favicon.png">
+
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="app.css" />
 
     <link rel="stylesheet" type="text/css" href="theme/css/libs/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="theme/css/libs/bootstrap.min.css">
+    <link rel='stylesheet' href='css/css.css' type='text/css' media='all'>
     <link rel="stylesheet" type="text/css" href="theme/css/styles.css">
 
+    <link rel="stylesheet" href="app.css" />
+
     <link href="manifest.webmanifest" rel="manifest" />
-    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="favicon.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon.png" />
 </head>
 
 <body>
-    <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
-    </div>
+    <div id="app"></div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
@@ -35,7 +40,6 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
-    <script src="theme/js/scripts.js"></script>
     <script src="theme/js/libs/jquery-1.12.4.min.js"></script>
     <script src="theme/js/libs/masonry.pkgd.min.js"></script>
     <script src="theme/js/libs/imagesloaded.pkgd.min.js"></script>
@@ -61,7 +65,12 @@
                 console.error("Failed to load script");
             }
 
-            /*document.body.appendChild(tag);*/
+            document.body.appendChild(tag);
+        }
+
+        window.enableLoading = function (enable) {
+            console.log("entered");
+            $('#preload').css('display', enable ? 'flex' : 'none');
         }
     </script>
 </body>

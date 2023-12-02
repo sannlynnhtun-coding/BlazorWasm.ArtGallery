@@ -1,11 +1,9 @@
 ﻿@page "/"
 @inject IJSRuntime JsRuntime
 
-<PageTitle>Home</PageTitle>
-
-<div class="col-md-9 col-md-offset-3">
+@* <div class="col-md-9 col-md-offset-3">
     <div class="posts">
-        <div class="posts-inner">
+        <div class="posts-inner grid-layout">
             <article class="post">
                 <div class="post-header">
                     <h2 class="title">
@@ -19,10 +17,577 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/1.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/2.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/3.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/4.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/5.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/6.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/7.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/8.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/9.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/10.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/theme/images/posts/11.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+        </div>
+        <!-- Pagination -->
+        <div class="pagination-wrap">
+
+            <div class="older">
+                <a href="#">Older Posts <i class="fa fa-angle-double-right"></i></a>
+            </div>
+            <div class="newer">
+                <a href="#"><i class="fa fa-angle-double-left"></i> Newer Posts</a>
+            </div>
+        </div>
+        <!-- End Pagination -->
+    </div>
+</div> *@
+
+<div class="col-md-9 col-md-offset-3">
+    <div class="posts">
+        <div class="posts-inner grid-layout" style="position: relative; height: 3569.74px;">
+            <article class="post" style="position: absolute; left: 0px; top: 0px;">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -45,8 +610,7 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->
@@ -58,8 +622,7 @@
 
 
             </article>
-
-            <article class="post">
+            <article class="post" style="position: absolute; left: 295px; top: 0px;">
                 <div class="post-header">
                     <h2 class="title">
                         <a href="single.html">Creativity is more than a song and dance act</a>
@@ -72,10 +635,9 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -98,8 +660,7 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->
@@ -111,8 +672,7 @@
 
 
             </article>
-
-            <article class="post">
+            <article class="post" style="position: absolute; left: 0px; top: 555.922px;">
                 <div class="post-header">
                     <h2 class="title">
                         <a href="single.html">Creativity is more than a song and dance act</a>
@@ -125,10 +685,9 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -151,8 +710,7 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->
@@ -164,8 +722,7 @@
 
 
             </article>
-
-            <article class="post">
+            <article class="post" style="position: absolute; left: 295px; top: 739.25px;">
                 <div class="post-header">
                     <h2 class="title">
                         <a href="single.html">Creativity is more than a song and dance act</a>
@@ -178,10 +735,9 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -204,8 +760,7 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->
@@ -217,8 +772,7 @@
 
 
             </article>
-
-            <article class="post">
+            <article class="post" style="position: absolute; left: 0px; top: 1138.89px;">
                 <div class="post-header">
                     <h2 class="title">
                         <a href="single.html">Creativity is more than a song and dance act</a>
@@ -231,10 +785,9 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -257,8 +810,7 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->
@@ -270,8 +822,7 @@
 
 
             </article>
-
-            <article class="post">
+            <article class="post" style="position: absolute; left: 295px; top: 1478.5px;">
                 <div class="post-header">
                     <h2 class="title">
                         <a href="single.html">Creativity is more than a song and dance act</a>
@@ -284,10 +835,9 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -310,8 +860,7 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->
@@ -323,8 +872,7 @@
 
 
             </article>
-
-            <article class="post">
+            <article class="post" style="position: absolute; left: 0px; top: 1694.81px;">
                 <div class="post-header">
                     <h2 class="title">
                         <a href="single.html">Creativity is more than a song and dance act</a>
@@ -337,10 +885,9 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -363,8 +910,7 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->
@@ -376,8 +922,7 @@
 
 
             </article>
-
-            <article class="post">
+            <article class="post" style="position: absolute; left: 0px; top: 2258.06px;">
                 <div class="post-header">
                     <h2 class="title">
                         <a href="single.html">Creativity is more than a song and dance act</a>
@@ -390,10 +935,9 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -416,8 +960,7 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->
@@ -430,7 +973,7 @@
 
             </article>
 
-            <article class="post">
+            <article class="post" style="position: absolute; left: 295px; top: 2263.12px;">
                 <div class="post-header">
                     <h2 class="title">
                         <a href="single.html">Creativity is more than a song and dance act</a>
@@ -443,10 +986,9 @@
                         </div>
                         <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
                         <div class="post-details-child">
-                            <a href="#" class="post-views">15 views</a>
-                            <a href="#" class="post-comments">03 Comments</a>
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
                             <div class="post-share-icon">
-                                <span>SHARE</span>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
                                     <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
@@ -469,8 +1011,109 @@
                     <!-- The Content -->
                     <div class="the-excerpt">
                         <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis. Phasellus congue volutpat porttitor.
-                            Vivamus fringilla iaculis ex, et condimentum magna pharetra id. Aliquam erat volutpat. Nam odio velit, egestas vel leo tempus, luctus dapibus mauris ...
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+
+            <article class="post" style="position: absolute; left: 0px; top: 2846.99px;">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/images/posts/10.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                </div>
+
+                <div class="read-more">
+                    <a href="single.html">Continue Reading ...</a>
+                </div>
+
+
+            </article>
+
+            <article class="post" style="position: absolute; left: 295px; top: 2945.55px;">
+                <div class="post-header">
+                    <h2 class="title">
+                        <a href="single.html">Creativity is more than a song and dance act</a>
+                    </h2>
+
+                    <!-- Post Details -->
+                    <div class="post-details">
+                        <div class="post-cat">
+                            <a href="#">Travel</a>
+                        </div>
+                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
+                        <div class="post-details-child">
+                            <a href="#" class="post-views">15</a>
+                            <a href="#" class="post-comments">03</a>
+                            <div class="post-share-icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Post Details -->
+                </div>
+                <div class="post-media">
+                    <a href="single.html">
+                        <img src="theme/images/posts/11.jpg" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>
+                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
                         </p>
                     </div>
                     <!-- End The Content -->

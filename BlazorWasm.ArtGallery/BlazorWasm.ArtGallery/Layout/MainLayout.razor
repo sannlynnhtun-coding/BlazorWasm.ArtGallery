@@ -234,7 +234,8 @@
         if (firstRender)
         {
             await JsRuntime.InvokeVoidAsync("enableLoading", true);
-            await Task.Delay(1000);
+            await Task.Delay(1200);
+            await JsRuntime.InvokeVoidAsync("loadJs", "theme/js/scripts.js");
             await JsRuntime.InvokeVoidAsync("enableLoading", false);
         }
     }
