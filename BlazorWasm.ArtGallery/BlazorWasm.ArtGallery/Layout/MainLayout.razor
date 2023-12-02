@@ -235,6 +235,7 @@
         {
             await JsRuntime.InvokeVoidAsync("enableLoading", true);
             await Task.Delay(1200);
+            await JsRuntime.InvokeVoidAsync("gridLayout");
             await JsRuntime.InvokeVoidAsync("loadJs", "theme/js/scripts.js");
             await JsRuntime.InvokeVoidAsync("enableLoading", false);
         }

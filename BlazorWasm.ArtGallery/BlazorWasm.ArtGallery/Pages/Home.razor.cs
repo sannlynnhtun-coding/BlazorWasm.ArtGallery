@@ -8,8 +8,8 @@ namespace BlazorWasm.ArtGallery.Pages
         {
             if (firstRender)
             {
-                await LoadJavaScript();
-                StateHasChanged();
+                //await LoadJavaScript();
+                //StateHasChanged();
             }
         }
 
