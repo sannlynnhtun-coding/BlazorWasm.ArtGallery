@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlazorWasm.ArtGallery</title>
     <base href="/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/app.css" />
+
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="BlazorWasm.ArtGallery.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="app.css" />
+
+    <link rel="stylesheet" type="text/css" href="theme/css/libs/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="theme/css/libs/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="theme/css/styles.css">
+
     <link href="manifest.webmanifest" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
@@ -31,6 +35,33 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
-</body>
+    <script src="theme/js/libs/jquery-1.12.4.min.js"></script>
+    <script src="theme/js/libs/masonry.pkgd.min.js"></script>
+    <script src="theme/js/libs/imagesloaded.pkgd.min.js"></script>
+    <script>
+        window.loadJs = function (sourceUrl) {
+            $('[data-name="plugin-script"]').remove();
 
+            if (sourceUrl.Length == 0) {
+                console.error("Invalid source URL");
+                return;
+            }
+
+            var tag = document.createElement('script');
+            tag.src = sourceUrl;
+            tag.type = "text/javascript";
+            tag.setAttribute("data-name", "plugin-script");
+
+            tag.onload = function () {
+                console.log("Script loaded successfully");
+            }
+
+            tag.onerror = function () {
+                console.error("Failed to load script");
+            }
+
+            /*document.body.appendChild(tag);*/
+        }
+    </script>
+</body>
 </html>

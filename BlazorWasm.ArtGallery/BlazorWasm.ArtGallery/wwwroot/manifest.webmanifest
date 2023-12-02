@@ -1,6 +1,6 @@
 {
-  "name": "BlazorWasm.ArtGallery",
-  "short_name": "BlazorWasm.ArtGallery",
+  "name": "Blazor WASM - Art Gallery",
+  "short_name": "Blazor WASM - Art Gallery",
   "id": "./",
   "start_url": "./",
   "display": "standalone",
@@ -9,12 +9,12 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "icon-512.png",
+      "src": "favicon.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "icon-192.png",
+      "src": "favicon.png",
       "type": "image/png",
       "sizes": "192x192"
     }
