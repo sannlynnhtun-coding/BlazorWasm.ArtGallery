@@ -3,568 +3,88 @@
 
 <div class="col-md-9 col-md-offset-3">
     <div class="posts">
-        <div class="posts-inner grid-layout">
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
 
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
+        @if (_formType == Models.EnumFormType.List)
+        {
+
+            if (_artList is not null && _artList.Count > 0)
+            {
+                <div class="posts-inner grid-layout">
+
+                    @foreach (var item in _artList)
+                    {
+                        <article class="post" @onclick="()=>FormType(item.ArtistId)">
+                            <div class="post-header">
+                                <h2 class="title">
+                                    <a href="javascript:void(0);">
+                                        @item.ArtName
+                                    </a>
+                                </h2>
                             </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/1.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
+                            <div class="post-media">
+                                <a href="javascript:void(0);">
+                                    <img src="@item.ArtPath" alt="Post">
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/2.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
+                            <div class="post-content">
 
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
+                                <!-- The Content -->
+                                <div class="the-excerpt">
+                                    <p>
+                                        @item.ArtDescription
+                                    </p>
+                                </div>
+                                <!-- End The Content -->
                             </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
+                        </article>
+                    }
                 </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/3.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
+            }
+        }
+        else
+        {
+            if (_artListByArtist is not null && _artListByArtist.Count > 0)
+            {
+                <div class="posts-inner grid-layout">
+                    @foreach (var item in _artListByArtist)
+                    {
+                        <article class="post" @onclick="()=>FormType(item.ArtistId)">
+                            <div class="post-header">
+                                <h2 class="title">
+                                    <a href="javascript:void(0);">
+                                        @item.ArtName
+                                    </a>
+                                </h2>
                             </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/4.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
+                            <div class="post-media">
+                                <a href="javascript:void(0);">
+                                    <img src="@item.ArtPath" alt="Post">
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/5.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
+                            <div class="post-content">
 
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
+                                <!-- The Content -->
+                                <div class="the-excerpt">
+                                    <p>
+                                        @item.ArtDescription
+                                    </p>
+                                </div>
+                                <!-- End The Content -->
                             </div>
-                        </div>
+                        </article>
+                    }
+                </div>
+                <!-- Pagination -->
+                <div class="pagination-wrap">
+                    <div class="older">
+                        <a href="javascript:void(0);" @onclick="Back">
+                            Back
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
                     </div>
-                    <!-- End Post Details -->
                 </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/6.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/7.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/8.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/9.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/10.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-            <article class="post">
-                <div class="post-header">
-                    <h2 class="title">
-                        <a href="/">Creativity is more than a song and dance act</a>
-                    </h2>
-
-                    <!-- Post Details -->
-                    <div class="post-details">
-                        <div class="post-cat">
-                            <a href="#">Travel</a>
-                        </div>
-                        <a href="#" class="post-date"><span>Aug 06, 2018</span></a>
-                        <div class="post-details-child">
-                            <a href="#" class="post-views">15</a>
-                            <a href="#" class="post-comments">03</a>
-                            <div class="post-share-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i><span>Google Plus</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i><span>Behance</span></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Post Details -->
-                </div>
-                <div class="post-media">
-                    <a href="/">
-                        <img src="theme/images/posts/11.jpg" alt="Post">
-                    </a>
-                </div>
-                <div class="post-content">
-
-                    <!-- The Content -->
-                    <div class="the-excerpt">
-                        <p>
-                            Morbi leo enim, laoreet eget urna id, ullamcorper condimentum urna. Curabitur accumsan sem et nisi ultricies porttitor. Aliquam sed nunc elit. Nunc faucibus interdum mauris at mattis...
-                        </p>
-                    </div>
-                    <!-- End The Content -->
-                </div>
-
-                <div class="read-more">
-                    <a href="/">Continue Reading ...</a>
-                </div>
-
-
-            </article>
-        </div>
-        <!-- Pagination -->
-        <div class="pagination-wrap">
-
-            <div class="older">
-                <a href="#">Older Posts <i class="fa fa-angle-double-right"></i></a>
-            </div>
-            <div class="newer">
-                <a href="#"><i class="fa fa-angle-double-left"></i> Newer Posts</a>
-            </div>
-        </div>
-        <!-- End Pagination -->
+                <!-- End Pagination -->
+            }
+        }
     </div>
 </div>
