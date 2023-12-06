@@ -43,26 +43,34 @@
         }
         else
         {
-            if (_artListByArtist is not null && _artListByArtist.Count > 0)
+            if (_artListAndProfile is not null)
             {
-                <div class="posts-inner grid-layout">
-                    @foreach (var item in _artListByArtist)
+                <div class="contact-item form-submit text-center">
+                    <input type="button" class="submit" value="Back" @onclick="Back">
+                </div>
+                if (_artListAndProfile.Artist is not null)
+                {
+                    <div style="padding-left: 44%;">
+                        <MudAvatar Style="height:70px; width:70px; font-size:2rem;">
+                            <MudImage Src="@(_artListAndProfile.Artist.ArtistProfile)"></MudImage>
+                        </MudAvatar>
+                    </div>
+                }
+                <div class="posts-inner list-layout">
+                    @foreach (var item in _artListAndProfile.ArtAndArtistLst)
                     {
                         <article class="post" @onclick="()=>FormType(item.ArtistId)">
-                            <div class="post-header">
-                                <h2 class="title">
-                                    <a href="javascript:void(0);">
-                                        @item.ArtName
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="post-media">
+                            <div class="post-media" style="background-image: url(@item.ArtPath)">
                                 <a href="javascript:void(0);">
                                     <img src="@item.ArtPath" alt="Post">
                                 </a>
                             </div>
                             <div class="post-content">
-
+                                <div class="post-header">
+                                    <h2 class="title">
+                                        <a href="javascript:void(0);"> @item.ArtName</a>
+                                    </h2>
+                                </div>
                                 <!-- The Content -->
                                 <div class="the-excerpt">
                                     <p>
@@ -71,19 +79,10 @@
                                 </div>
                                 <!-- End The Content -->
                             </div>
+
                         </article>
                     }
                 </div>
-                <!-- Pagination -->
-                <div class="pagination-wrap">
-                    <div class="older">
-                        <a href="javascript:void(0);" @onclick="Back">
-                            Back
-                            <i class="fa fa-angle-double-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- End Pagination -->
             }
         }
     </div>

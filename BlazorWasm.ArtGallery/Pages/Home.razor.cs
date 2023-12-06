@@ -6,7 +6,7 @@ namespace BlazorWasm.ArtGallery.Pages
     public partial class Home
     {
         private List<ArtAndArtistModel>? _artList = null;
-        private List<ArtAndArtistModel>? _artListByArtist = null;
+        private ArtAndArtistProfileModel? _artListAndProfile = null;
         private EnumFormType _formType = EnumFormType.List;
         protected override void OnAfterRender(bool firstRender)
         {
@@ -23,17 +23,19 @@ namespace BlazorWasm.ArtGallery.Pages
             await JsRuntime.InvokeVoidAsync("loadJs", "theme/js/scripts.js");
         }
 
-        private void FormType(int artistId)
+        private async Task FormType(int artistId)
         {
             _artList = null;
             _formType = EnumFormType.Detail;
-            _artListByArtist = _service.ShowArtLstByArtist(artistId);
+            _artListAndProfile = _service.ShowArtLstByArtist(artistId);
             StateHasChanged();
+            await LoadJavaScript();
+            await JsRuntime.InvokeVoidAsync("gridLayout");
         }
 
         private async Task Back()
         {
-            _artListByArtist = null;
+            _artListAndProfile = null;
             _formType = EnumFormType.List;
             _artList = _service.ShowArtLst();
             StateHasChanged();

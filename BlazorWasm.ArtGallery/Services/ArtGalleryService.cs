@@ -31,10 +31,16 @@ public class ArtGalleryService
         return artList;
     }
 
-    public List<ArtAndArtistModel> ShowArtLstByArtist(int artistId)
+    public ArtAndArtistProfileModel ShowArtLstByArtist(int artistId)
     {
         var artLst = ShowArtLst().Where(x => x.ArtistId == artistId).ToList();
-        return artLst;
+        var artist = GetArtist.FirstOrDefault(x => x.ArtistId == artistId);
+        var model = new ArtAndArtistProfileModel
+        {
+            ArtAndArtistLst = artLst,
+            Artist = artist ?? null
+        };
+        return model;
     }
     private List<T> GetData<T>(string jsonStr)
     {
@@ -45,12 +51,12 @@ public class ArtGalleryService
  {
   ""ArtistId"": 1,
   ""ArtistName"": ""MMarina"",
-  ""ArtistProfile"": ""https:\/\/www.facebook.com\/profile.php?id=100090137542974&mibextid=ZbWKwL""
+  ""ArtistProfile"": ""https://scontent.fmdl4-4.fna.fbcdn.net/v/t39.30808-1/385257389_267940642887185_460994790741669571_n.jpg?stp=dst-jpg_s480x480&_nc_cat=105&ccb=1-7&_nc_sid=11e7ab&_nc_eui2=AeHEYgAxMoAAiNfgH3gOGXjW0kcvk0VTIUbSRy-TRVMhRrPwQf1hI-0Vy6i34K75FeRoORBlGacR_Upky9kphc6y&_nc_ohc=5mD81YRDRDwAX_x-ewC&_nc_ht=scontent.fmdl4-4.fna&oh=00_AfAcVKeCkbY2d0UyQIf2HNg5_kNtO5-mtykZne05q1-BjQ&oe=65769A31""
  },
  {
   ""ArtistId"": 2,
   ""ArtistName"": ""YellZawHlaing"",
-  ""ArtistProfile"": ""https:\/\/www.facebook.com\/profile.php?id=100082413631418&mibextid=ZbWKwL""
+  ""ArtistProfile"": ""https://scontent.fmdl4-4.fna.fbcdn.net/v/t39.30808-1/391717080_314939281263191_7825732557761776530_n.jpg?stp=dst-jpg_s480x480&_nc_cat=106&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeGXXtde7xrRRWBh0D4ddxsS_7kScUpvTw7_uRJxSm9PDuZe7Gq9_2KFI6uhwoMYkmvnr6pJPo8j6Q9kkJvIphnS&_nc_ohc=nQvpGnMo6zkAX8V6FU-&_nc_ht=scontent.fmdl4-4.fna&oh=00_AfCXVl119BT84Z2oQRiHO116OBKUO9ueXBvMcO1D2EqCRQ&oe=6574F3C6""
  },
  {
   ""ArtistId"": 3,
