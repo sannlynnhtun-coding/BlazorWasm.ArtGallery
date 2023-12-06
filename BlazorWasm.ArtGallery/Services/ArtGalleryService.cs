@@ -16,7 +16,7 @@ public class ArtGalleryService
         var getGalleryist = GetGallery;
         foreach (var item in getGalleryist)
         {
-            var getItem = GetArt.FirstOrDefault(x=> x.ArtId == item.ArtId);
+            var getItem = GetArt.FirstOrDefault(x => x.ArtId == item.ArtId);
             getItem.ArtPath = $"img/{getItem.ArtPath}";
             var model = new ArtAndArtistModel
             {
@@ -33,7 +33,7 @@ public class ArtGalleryService
 
     public List<ArtAndArtistModel> ShowArtLstByArtist(int artistId)
     {
-        var artLst = ShowArtLst().Where(x=> x.ArtistId == artistId).ToList();
+        var artLst = ShowArtLst().Where(x => x.ArtistId == artistId).ToList();
         return artLst;
     }
     private List<T> GetData<T>(string jsonStr)
@@ -182,12 +182,13 @@ public class ArtGalleryService
  },
  {
   ""ArtId"": 8,
-  ""ArtName"": ""Zenkei"",
+  ""ArtName"": ""Break Up"",
   ""ArtDescription"": ""Title - Break Up\n\nသေကွဲရယ် ၊ ရှင်ကွဲရယ် တစ်နည်းနည်းသောကွဲခြင်းနဲ့ ဆက်ဆံရေးတွေဟာ မတော်တဆကျောခိုင်းရပ်မိကြလိမ့်ဦးမယ်။\nမတည်မြဲခြင်းကြားမှာ ငါတို့ဟာ ပျော်ခဲ့ဖူးမယ် ၊ ငိုခဲ့ဖူးမယ် ၊ လွမ်းခဲ့ဖူးမယ် ၊ ဒေါသတွေလည်းထွက်ခဲ့ဖူးကြမယ်။ \nသမုဒယသစ္စာကိုလက်ကိုင်ထားရင်း နှင်း‌ဆီတွေကြွေတာကိုလည်း ငါတို့တွေ ကြည်ကြည်နူးနူးကြည့်ဖူးကြလိမ့်မယ်။\nဘယ်လိုခံစားပြီးဆွဲထားလဲဆို‌တော့ သီချင်းစာသားတစ်ကြောင်းကို ကြားပြီးတဲ့နောက်မှာ ဒီလိုလေးဆွဲဖို့ idea ရခဲ့ပါတယ်။  ပန်းချီကားရဲ့ အဓိပ္ပာယ်ကတော့ မပြောတော့ဘူးနော်။ ဒီပန်းချီကားကိုကြည့်ရင်းနဲ့ ကြည့်သူမှာပေါ်လာတဲ့ ခံစားချက် ၊ ကြည့်သူ သဘောပေါက်သွားတဲ့ အကြောင်းအရာဟာ သူ့ရဲ့ အဓိပ္ပာယ်ပါပဲ။"",
   ""ArtPath"": ""8.jpg""
  },
  {
   ""ArtId"": 9,
+ ""ArtName"": ""ဘုံကဖီး"",
   ""ArtDescription"": ""Title  ဘုံကဖီး\nပုံကတော့အသိ ကဗျာဆရာလဲဟုတ် ပန်းချီဆရာလဲဖြစ်တဲ့ ကိုအီလစ်တို့ရဲ့ဘုံကဖီးလေးပါပဲ\nပန်းချီကားလေးအဓိပ္ပာယ်ကတော့ တစ်ပတ်မှာ36နာရီလက်ဖက်ရည်ဆိုင်ထိုင်ခဲ့တယ် \nတစ်ဖြည်းဖြည်းနဲ့ လက်ဖက်ရည်ဆိုင်ကခုံတွေလိုတို့ဘဝတွေပုဝင်နေခဲ့ ဘယ်လိုမှမေ့ပျောက်လို့မရတဲ့နေ့တွေ တစ်ဟုန်းထိုးမောင်းထွက်သွားတဲ့ဘဝတွေ \nတစ်ဘဝလုံးပုံအောခဲ့တဲ့ကစားဝိုင်း ငါတို့အားလုံးရဲ့ ဘုံကဖီးပါပဲ။"",
   ""ArtPath"": ""9.jpg""
  },

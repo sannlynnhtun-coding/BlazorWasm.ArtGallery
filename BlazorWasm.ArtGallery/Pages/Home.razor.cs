@@ -31,12 +31,14 @@ namespace BlazorWasm.ArtGallery.Pages
             StateHasChanged();
         }
 
-        private void Back()
+        private async Task Back()
         {
             _artListByArtist = null;
             _formType = EnumFormType.List;
             _artList = _service.ShowArtLst();
             StateHasChanged();
+            await LoadJavaScript();
+            await JsRuntime.InvokeVoidAsync("gridLayout");
         }
     }
 }

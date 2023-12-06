@@ -777,7 +777,7 @@ body {
   display: block;
 }
 .pagination-wrap .older {
-  float: right;
+  float: left;
   text-align: right;
   max-width: 45%;
 }
