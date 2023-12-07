@@ -12,7 +12,7 @@ namespace BlazorWasm.ArtGallery.Pages
         {
             if (firstRender)
             {
-                _artList = _service.ShowArtLst();
+                _artList = _service.ShowArtList();
                 //await LoadJavaScript();
                 StateHasChanged();
             }
@@ -37,7 +37,7 @@ namespace BlazorWasm.ArtGallery.Pages
         {
             _artListAndProfile = null;
             _formType = EnumFormType.List;
-            _artList = _service.ShowArtLst();
+            _artList = _service.ShowArtList();
             StateHasChanged();
             await LoadJavaScript();
             await JsRuntime.InvokeVoidAsync("gridLayout");

@@ -47,14 +47,30 @@
             {
                 if (_artListAndProfile.Artist is not null)
                 {
+                    string profileUrl = $"art-gallery/profile/{_artListAndProfile.Artist.ArtistId}.jpg";
                     <div class="contact-item form-submit text-center">
                         <MudAvatar Style="height:70px; width:70px; font-size:2rem;">
-                            <MudImage Src="@(_artListAndProfile.Artist.ArtistProfile)"></MudImage>
+                            <MudImage Src="@profileUrl"></MudImage>
                         </MudAvatar>
+                        <h4>
+                            @_artListAndProfile.Artist.ArtistName
+                        </h4>
+                        <div class="socials">
+                            @foreach (var item in _artListAndProfile.Artist.Social.Where(x => x.Link is not null))
+                            {
+                                <a href="@item.Link"
+                                   target="_blank">
+                                    <MudButton Variant="Variant.Filled">
+                                        <i class="fa fa-@item.Name"></i>
+                                    </MudButton>
+                                </a>
+                            }
+                        </div>
                     </div>
                 }
                 <div class="contact-item form-submit text-center">
-                    <input type="button" class="submit" value="Back" @onclick="Back">
+                    @* <input type="button" class="submit" value="Back" @onclick="Back"> *@
+                    <MudIconButton Icon="@Icons.Material.Filled.KeyboardBackspace" aria-label="back" @onclick="Back"></MudIconButton>
                 </div>
                 <div class="posts-inner list-layout">
                     @foreach (var item in _artListAndProfile.ArtAndArtistLst)
