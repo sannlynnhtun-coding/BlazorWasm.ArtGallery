@@ -194,7 +194,7 @@ public class ArtGalleryService
 	},
 	{
 		""GalleryId"": 7,
-		""ArtistId"": 3,
+		""ArtistId"": 8,
 		""ArtId"": 7
 	},
 	{
