@@ -27,3 +27,11 @@
         content: "An error has occurred."
     }
 
+.socials {
+    padding-top: 5px;
+}
+
+.mud-button-label > i {
+    font-size: 2rem;
+    padding: 10px;
+}
