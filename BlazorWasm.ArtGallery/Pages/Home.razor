@@ -45,17 +45,17 @@
         {
             if (_artListAndProfile is not null)
             {
-                <div class="contact-item form-submit text-center">
-                    <input type="button" class="submit" value="Back" @onclick="Back">
-                </div>
                 if (_artListAndProfile.Artist is not null)
                 {
-                    <div style="padding-left: 44%;">
+                    <div class="contact-item form-submit text-center">
                         <MudAvatar Style="height:70px; width:70px; font-size:2rem;">
                             <MudImage Src="@(_artListAndProfile.Artist.ArtistProfile)"></MudImage>
                         </MudAvatar>
                     </div>
                 }
+                <div class="contact-item form-submit text-center">
+                    <input type="button" class="submit" value="Back" @onclick="Back">
+                </div>
                 <div class="posts-inner list-layout">
                     @foreach (var item in _artListAndProfile.ArtAndArtistLst)
                     {
