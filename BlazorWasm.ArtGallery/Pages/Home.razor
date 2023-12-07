@@ -56,7 +56,7 @@
                             @_artListAndProfile.Artist.ArtistName
                         </h4>
                         <div class="socials">
-                            @foreach (var item in _artListAndProfile.Artist.Social.Where(x => x.Link is not null))
+                            @foreach (var item in _artListAndProfile.Artist.Social.Where(x => x.Link is not null && x.Link != ""))
                             {
                                 <a href="@item.Link"
                                    target="_blank">

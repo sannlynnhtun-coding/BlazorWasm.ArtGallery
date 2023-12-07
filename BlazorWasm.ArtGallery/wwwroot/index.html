@@ -75,7 +75,7 @@
             $('#preload').css('display', enable ? 'flex' : 'none');
         }
 
-        window.gridLayout = function () {
+        window.gridLayout = function (isScrollTop) {
 
             var $header = $('.header'),
                 $search = $('.fa-search', $header);
@@ -123,7 +123,9 @@
                 }
             });
 
-            $("html, body").animate({ scrollTop: 0 }, "slow");
+            if (isScrollTop) {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
         }
     </script>
 </body>

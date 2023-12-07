@@ -199,17 +199,17 @@ public class ArtGalleryService
 	},
 	{
 		""GalleryId"": 8,
-		""ArtistId"": 4,
+		""ArtistId"": 3,
 		""ArtId"": 8
 	},
 	{
 		""GalleryId"": 9,
-		""ArtistId"": 5,
+		""ArtistId"": 4,
 		""ArtId"": 9
 	},
 	{
 		""GalleryId"": 10,
-		""ArtistId"": 6,
+		""ArtistId"": 5,
 		""ArtId"": 10
 	},
 	{

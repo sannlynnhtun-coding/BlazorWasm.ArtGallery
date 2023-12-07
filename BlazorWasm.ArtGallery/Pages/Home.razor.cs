@@ -30,7 +30,7 @@ namespace BlazorWasm.ArtGallery.Pages
             _artListAndProfile = _service.ShowArtLstByArtist(artistId);
             StateHasChanged();
             await LoadJavaScript();
-            await JsRuntime.InvokeVoidAsync("gridLayout");
+            await JsRuntime.InvokeVoidAsync("gridLayout", true);
         }
 
         private async Task Back()
