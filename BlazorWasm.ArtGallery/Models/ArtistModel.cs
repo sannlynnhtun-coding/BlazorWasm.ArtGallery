@@ -4,6 +4,6 @@
     {
         public int ArtistId { get; set; }
         public string ArtistName { get; set; }
-        public string ArtistProfile { get; set; }
+        public List<SocialModel> Social { get; set; }
     }
 }
